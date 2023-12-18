@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <targets>
+    <target xsi:type="File" name="f" fileName="${basedir}/logs/${level}/${shortdate}.log"
+            layout="${longdate} ${uppercase:${level}} ${message}" />
+  </targets>
+
+  <rules>
+    <logger name="*" level="Trace" writeTo="f" />
+    <logger name="*" level="Debug" writeTo="f" />
+    <logger name="*" level="Info" writeTo="f" />
+    <logger name="*" level="Warn" writeTo="f" />
+	<logger name="*" level="Error" writeTo="f" />
+  </rules>
+</nlog>
