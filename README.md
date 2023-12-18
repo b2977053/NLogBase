@@ -1,0 +1,2 @@
+# NLogBase
+NLog base
